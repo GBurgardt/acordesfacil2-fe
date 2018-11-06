@@ -1,0 +1,17 @@
+$goldenWheat: #a39274;
+$softWheat: #dfd8c8;
+$deepGray: #252523;
+
+* {
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+
+// pre, a, h1, h2 {
+//     color: $softWheat;
+// }
+
+html, body {
+    height: 100%;
+    
+    background-color: $deepGray;
+}

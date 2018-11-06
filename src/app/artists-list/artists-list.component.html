@@ -1,0 +1,11 @@
+<div class="artists-list-container">
+    <input [(ngModel)]="searchText" (ngModelChange)="onSearch($event)" >
+        
+    <div class="suggestion-list">
+        <ul class="artists-lists">
+            <li *ngFor="let artist of artists" (click)="onClickArtist(artist)">
+                {{ artist.name }}
+            </li>
+        </ul>
+    </div>
+</div>

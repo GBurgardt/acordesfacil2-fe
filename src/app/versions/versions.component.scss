@@ -1,0 +1,35 @@
+$goldenWheat: #a39274;
+$softWheat: #dfd8c8;
+$deepGray: #252523;
+
+.versions {
+    font-size: 0.96rem;
+    .versions-content {
+        margin: 0 5%;
+
+        .badges-container {                                                                                                                                                                                                                                                                                                                                                                                     
+            display: flex;
+            padding: 10px 0;
+            margin: 1.2% 0 4.2%;
+            overflow: auto;
+        }
+    
+        .sheet-container {
+            color: $softWheat;
+ 
+            /deep/ pre {
+
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                text-align: justify;
+
+                > a {
+                    cursor: pointer;
+                    color: $goldenWheat;
+                }
+            }
+            
+        }
+        
+    }
+}

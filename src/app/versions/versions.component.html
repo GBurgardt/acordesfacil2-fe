@@ -1,0 +1,14 @@
+<div class="versions">
+
+    <div *ngIf="currentSong" class="versions-content">
+
+        <div class="badges-container">
+            <badge [text]="nameCurrentArtist"></badge>
+            <badge [text]="currentSong.name"></badge>
+        </div>
+    
+        <div class="sheet-container" [innerHTML]="currentSong.versions[0].sheet">
+        </div>
+
+    </div>
+</div>

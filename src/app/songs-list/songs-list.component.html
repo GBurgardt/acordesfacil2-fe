@@ -1,0 +1,16 @@
+<div class="songs-list-container">
+
+    <div *ngIf="nameCurrentArtist" class="badges-container">
+        <badge [text]="nameCurrentArtist"></badge>
+    </div>
+
+    <input [(ngModel)]="searchText" (ngModelChange)="onSearch($event)">
+
+    <div class="suggestion-list">
+        <ul class="songs-lists">
+            <li *ngFor="let song of songs" (click)="onClickSong(song)">
+                {{ song.name }}
+            </li>
+        </ul>
+    </div>
+</div>

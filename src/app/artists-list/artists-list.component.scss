@@ -1,0 +1,34 @@
+.artists-list-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    .suggestion-list {
+        margin-top: 2%;
+        display: flex;
+        justify-content: center;
+    
+        .artists-lists {
+            margin: 0px;
+            list-style-type: none;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 1.15rem;
+            color: #dfd8c8;
+        
+            > li {
+                cursor: pointer;
+                padding: 8px 0;
+                background-color: #a3927444;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                margin-bottom: 2.3%;
+            }
+        
+            > li:nth-child(odd) {
+                background-color: #a3927466;
+            }
+        }
+    }
+
+}    
