@@ -3,6 +3,9 @@
     display: flex;
     flex-direction: column;
 
+    // padding: 4% 5%;
+    padding: 2% 5% 4%;
+
     .badges-container {
         display: flex;
         padding: 10px 0;
@@ -22,18 +25,20 @@
             width: 100%;
             text-align: center;
             font-size: 1.15rem;
-            color: #dfd8c8;
+            // color: #dfd8c8;
         
             > li {
                 cursor: pointer;
                 padding: 8px 0;
-                background-color: #a3927444;
-                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                
+                // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
                 margin-bottom: 2.3%;
+                font-size: 1.4rem;
             }
         
             > li:nth-child(odd) {
-                background-color: #a3927466;
+                // background-color: #a3927466;
             }
         }
     }

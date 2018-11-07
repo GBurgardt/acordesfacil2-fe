@@ -1,17 +1,11 @@
-$goldenWheat: #a39274;
-$softWheat: #dfd8c8;
-$deepGray: #252523;
+// @import "../themes/dark.css";
+@import "../src/variables.scss";
 
-* {
-    font-family: Roboto,"Helvetica Neue",sans-serif;
-}
-
-// pre, a, h1, h2 {
-//     color: $softWheat;
-// }
+@import "../themes/miligram.min.css";
 
 html, body {
-    height: 100%;
-    
-    background-color: $deepGray;
+    // height: 100%;
+
+    background-color: #fff;
+    color: $strong_rough;
 }

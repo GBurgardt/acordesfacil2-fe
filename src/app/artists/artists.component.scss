@@ -1,6 +1,3 @@
-$goldenWheat: #a39274;
-$softWheat: #dfd8c8;
-$deepGray: #252523;
 
 .artists {
     display: flex;
@@ -9,7 +6,8 @@ $deepGray: #252523;
     }
 
     .content {
-        margin-top: 1.1%;
+        // margin-top: 1.1%;
+        margin-top: 3.1%;
         display: flex;
         flex-direction: column;
 
@@ -24,13 +22,18 @@ $deepGray: #252523;
 
         .title-container {
             text-align: center;
-            color: $goldenWheat;
+
+            // color: $goldenWheat;
+
             font-size: 2.2rem;
             font-weight: 479;
             font-stretch: ultra-expanded;
 
             > p {
-                margin: 1% 0 1%;
+                // margin: 1% 0 1%;
+                margin: 1% 0 0%;
+                font-size: 2.6rem;
+                // font-weight: 700;
             }
         }
 
