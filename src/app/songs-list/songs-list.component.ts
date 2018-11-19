@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth-service';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
+import { UtilsService } from 'src/services/utilsService';
 
 @Component({
     selector: 'app-songs-list',
@@ -9,25 +10,28 @@ import { ActivatedRoute, Router } from '@angular/router';
     styleUrls: ['./songs-list.component.scss']
 })
 export class SongsListComponent implements OnInit {
-    songs = [];
-    songsComplete = [];
-    idCurrentArtist;
+    // songs = [];
+    // songsComplete = [];
+    songs;
+    songsComplete;
+    hrefArtist;
     nameCurrentArtist;
     searchText: String;
 
     constructor(
         private authService: AuthService,
         private route: ActivatedRoute,
-        private router: Router
+        private router: Router,
+        private utilsService: UtilsService
     ) { }
 
     ngOnInit() {
         this.route.params
             .subscribe(data => {
-                this.idCurrentArtist = data.idArtist;
-                this.authService.findSongs(data.idArtist)
+                this.hrefArtist = data.hrefArtist;
+                this.authService.findSongs(data.hrefArtist)
                     .subscribe((resp: any) => {
-                        this.songs = this.songsComplete = resp.songs;
+                        this.songs = this.songsComplete = resp.songs.sort((a,b) => b.popularity - a.popularity)
                         this.nameCurrentArtist = resp.name;
                     });
             });
@@ -35,7 +39,7 @@ export class SongsListComponent implements OnInit {
 
     onClickSong = (song) => {
         console.log(song[`name`]);
-        this.router.navigate([`/${this.idCurrentArtist}/${song[`name`]}`])
+        this.router.navigate([`/${this.hrefArtist}/${song[`name`]}`])
     }
 
     onSearch = (searchedText) => 

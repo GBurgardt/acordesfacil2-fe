@@ -11,25 +11,48 @@ import { ArtistsListComponent } from './artists-list/artists-list.component';
 import { SongsListComponent } from './songs-list/songs-list.component';
 import { VersionsComponent } from './versions/versions.component';
 import { SongsComponent } from './songs/songs.component';
-import { BadgeComponent } from './badge/badge.component';
+import { BadgeItemComponent } from './badge-item/badge-item.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { 
+    MatButtonModule, 
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatListModule,
+    MatSelectModule
+} from '@angular/material';
+import { SpinnerItemComponent } from './spinner-item/spinner-item.component';
+import { UtilsService } from 'src/services/utilsService';
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ArtistsComponent,
-    ArtistsListComponent,
-    SongsListComponent,
-    VersionsComponent,
-    SongsComponent,
-    BadgeComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        ArtistsComponent,
+        ArtistsListComponent,
+        SongsListComponent,
+        VersionsComponent,
+        SongsComponent,
+        BadgeItemComponent,
+        SpinnerItemComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatCheckboxModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatListModule,
+        MatSelectModule
+    ],
+    providers: [
+        UtilsService
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

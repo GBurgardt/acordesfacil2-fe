@@ -1,11 +1,25 @@
 <div class="artists-list-container">
-    <input [(ngModel)]="searchText" (ngModelChange)="onSearch($event)" >
-        
-    <div class="suggestion-list">
-        <ul class="artists-lists">
-            <li *ngFor="let artist of artists" (click)="onClickArtist(artist)">
-                {{ artist.name }}
-            </li>
-        </ul>
+    <div class="input-container">
+        <mat-form-field class="input-search">
+            <input [(ngModel)]="searchText" (ngModelChange)="onSearch($event)" matInput placeholder="Artista o cancion">
+        </mat-form-field>
+
+        <div class="spinner-container">
+            <i *ngIf="searchState === 'INPUT_CLEAN'" class="fas fa-search"></i>
+            <i *ngIf="searchState === 'SEARCHING'" class="fas fa-circle-notch fa-spin"></i>
+            <i (click)="clearSearch()" *ngIf="searchState === 'NOT_SEARCHING'" class="fas fa-times"></i>
+        </div>
     </div>
+
+    <mat-list *ngIf="artists && artists.length > 0" role="list" class="artists-list">
+        <mat-list-item *ngFor="let artist of artists; let ind = index" 
+                        [ngStyle]="{
+                            'background': utilsService.getItemListStyle(artist.lengthSongs, ind )
+                        }"
+            role="artistItem" (click)="onClickArtist(artist)">
+            {{ artist.name }}
+        </mat-list-item>
+    </mat-list>
 </div>
+
+<!-- 'background': getArtistStyle(artist, ind) -->

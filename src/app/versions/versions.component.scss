@@ -4,31 +4,144 @@
     .versions-content {
         margin: 0 1%;
 
-        .badges-container {                                                                                                                                                                                                                                                                                                                                                                                     
+        .badges-container {
             display: flex;
+            justify-content: center;
             padding: 10px 0;
             overflow: auto;
+            margin: 2.4% 0 0%;
+            padding-bottom: 4%;
+            border-bottom: solid #00e68cde 4px;
         }
     
+        .options-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 0% 0 0.3%;
+
+            .utils-container {
+                display: flex;
+                font-size: 1.3rem;
+                color: #00d484;
+
+                .utils-section {
+                    display: flex;
+                }
+                .utils-item {
+                    // color: #00d484;
+                    margin: 12.7px 3px 0px;
+                    padding: 0px 6px;
+                    // font-size: 1.3rem;
+                }
+
+                .note-selected {
+                    font-size: 0.9rem;
+                    margin: 0;
+                    padding: 4px 6px 1px 4.7px;
+                    background: #00c688;
+                    color: #333333;
+                    border: none;
+                    font-weight: bolder;
+                    height: 17px;
+                    display: block;
+                }
+
+                .velocity-container {
+                    display: flex;
+                    margin: 0px 3px 0px;
+                    padding: 7px 3px 0px;
+                    font-size: 0.9rem;
+                    
+                    > i {
+                        padding: 9px 3px 0;
+                        font-size: 0.7rem;
+                    }
+
+                    > p {
+                        margin: 0 8px;
+                        // color: #e0e0e0;
+                        // border: solid #e0e0e0 2px;
+                        color: #00d484;
+                        // border: solid #00d484 2px;
+                        font-weight: bold;
+                        // padding: 3px 7px 0px 7px;
+                        border-radius: 16px;
+                        padding-top: 6px;
+                    }
+                }
+
+            }
+
+            .versions-select-container {
+                display: flex;
+                justify-content: flex-end;
+    
+                // .version-item {
+                //     color: #e0e0e0;
+                //     border: solid #e0e0e0 2px;
+                //     font-weight: bold;
+                //     margin: 9px 3px 0px;
+                //     // padding: 2px 8px 2px 8px;
+                //     padding: 1px 7px 0px 6px;
+                //     border-radius: 16px;
+                // }
+    
+                // .version-item-select {
+                //     color: #00d484;
+                //     border: solid #00d484 2px;
+                // }
+            }
+
+
+            .version-item {
+                color: #e0e0e0;
+                border: solid #e0e0e0 2px;
+                font-weight: bold;
+                margin: 9px 3px 0px;
+                // padding: 2px 8px 2px 8px;
+                padding: 1px 7px 0px 6px;
+                border-radius: 16px;
+            }
+
+            .version-item-select {
+                color: #00d484;
+                border: solid #00d484 2px;
+            }
+        }
+
+
+
         .sheet-container {
+            display: block;
+            overflow: auto;
+            //max-height: 1100px;
+            max-height: 82vh;
+
             /deep/ pre {
 
                 white-space: pre-wrap;
                 word-wrap: break-word;
                 text-align: justify;
                 font-size: 0.94em;
-                padding-left: 1px;
-                border-left: 0.3rem solid #ddd0a0;
+                padding-left: 7px;
+                border-left: 0.3rem solid $primary;
 
                 > a {
                     cursor: pointer;
 
-                    // color: $primary;
-                    color: #dfae5d;
+                    color: #64fba5;
+                    // color: #dfae5d;
                 }
             }
             
         }
         
     }
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin-top: 8%;
 }

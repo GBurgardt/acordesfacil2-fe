@@ -1,14 +1,70 @@
-<div class="versions">
+<div *ngIf="currentSong" class="versions">
 
-    <div *ngIf="currentSong" class="versions-content">
+    <div class="versions-content">
 
         <div class="badges-container">
-            <badge [text]="nameCurrentArtist"></badge>
-            <badge [text]="currentSong.name"></badge>
+            <badge-item [text]="nameCurrentArtist"></badge-item>
+            <badge-item [text]="currentSong.name"></badge-item>
         </div>
+
+        <div class="options-container">
+            <div class="utils-container">
+                <div class="utils-section">
+                    <div (click)="onClickPlay()" class="utils-item" style="font-size: 1.364rem;">
+                        <i *ngIf="!isPlaying" class="fas fa-play-circle"></i>
+                        <i *ngIf="isPlaying" class="fas fa-pause-circle"></i>
+                    </div>
     
-        <div class="sheet-container" [innerHTML]="currentSong.versions[0].sheet">
+                    <div *ngIf="isPlaying" class="velocity-container">
+                        <i (click)="this.slidingVelocity = this.slidingVelocity - .2" class="fas fa-minus"></i>
+                        <p>{{ 
+                            utilsService.parseDecimal(this.slidingVelocity)
+                        }}</p>
+                        <i (click)="this.slidingVelocity = this.slidingVelocity + .2" class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="utils-section">
+                    <!-- <div (click)="test = !test" class="utils-item" style="margin: 10.8px 0 0 0;">
+                        <a class="version-item note-selected">T</a>
+                    </div> -->
+                    
+                    <div (click)="test = !test" class="utils-item" style="margin: 10.8px 0 0 0;">
+                        <i class="fas fa-music version-item note-selected"></i>
+                    </div>
+    
+                    <div *ngIf="test" class="velocity-container">
+                        <i (click)="this.slidingVelocity = this.slidingVelocity - .2" class="fas fa-minus"></i>
+                        <p>{{ 
+                            utilsService.parseDecimal(this.slidingVelocity)
+                        }}</p>
+                        <i (click)="this.slidingVelocity = this.slidingVelocity + .2" class="fas fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="versions-select-container">
+                <div    *ngFor="let ver of currentSong.versions" 
+                        (click)="selectedVersion = ver" 
+                        class="version-item"
+                        [ngClass]="{'version-item': true, 'version-item-select': selectedVersion.priority === ver.priority}"
+                        >
+                    {{ 
+                        ver.sheetType === 'H' ? 'V' :
+                        ver.sheetType === 'K' ? 'P' :
+                        ver.sheetType === 'R' ? 'G' :
+                        ver.sheetType
+                    }}
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div #sheetContainer class="sheet-container" [innerHTML]="selectedVersion.sheet">
         </div>
 
     </div>
+</div>
+
+<div *ngIf="!(currentSong)" class="spinner-container">
+    <spinner-item></spinner-item>
 </div>

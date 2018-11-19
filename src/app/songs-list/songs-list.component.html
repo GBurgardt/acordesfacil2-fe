@@ -1,16 +1,24 @@
-<div class="songs-list-container">
+<div *ngIf="songs && nameCurrentArtist && songs.length > 0" class="songs-list-container">
 
     <div *ngIf="nameCurrentArtist" class="badges-container">
-        <badge [text]="nameCurrentArtist"></badge>
+        <badge-item [text]="nameCurrentArtist"></badge-item>
     </div>
 
-    <input [(ngModel)]="searchText" (ngModelChange)="onSearch($event)">
+    <mat-form-field class="input-search">
+        <input [(ngModel)]="searchText" (ngModelChange)="onSearch($event)" matInput placeholder="Cancion">
+    </mat-form-field>
 
-    <div class="suggestion-list">
-        <ul class="songs-lists">
-            <li *ngFor="let song of songs" (click)="onClickSong(song)">
-                {{ song.name }}
-            </li>
-        </ul>
-    </div>
+    <mat-list role="list" class="songs-list">
+        <mat-list-item  role="songItem" 
+                        *ngFor="let song of songs; let ind = index" 
+                        (click)="onClickSong(song)"
+                        
+        >
+            {{ song.name }}
+        </mat-list-item>
+    </mat-list>
+</div>
+
+<div *ngIf="!(songs && nameCurrentArtist && songs.length > 0)" class="spinner-container">
+    <spinner-item></spinner-item>
 </div>

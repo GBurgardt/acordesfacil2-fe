@@ -16,7 +16,7 @@ const routes: Routes = [
                 component: ArtistsListComponent
             },
             {
-                path: ':idArtist',
+                path: ':hrefArtist',
                 component: SongsComponent,
                 children: [
                     {

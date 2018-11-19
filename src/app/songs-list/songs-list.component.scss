@@ -1,46 +1,39 @@
 .songs-list-container {
-    width: 100%;
     display: flex;
     flex-direction: column;
-
-    // padding: 4% 5%;
     padding: 2% 5% 4%;
+    margin-top: 2%;
 
     .badges-container {
         display: flex;
-        padding: 10px 0;
-        margin: 1.2% 0 2%;
-        overflow: auto;
     }
-    
-    .suggestion-list {
-        margin-top: 2%;
-        display: flex;
-        justify-content: center;
-    
-        .songs-lists {
-            margin: 0px;
-            list-style-type: none;
-            padding: 0;
-            width: 100%;
-            text-align: center;
-            font-size: 1.15rem;
-            // color: #dfd8c8;
-        
-            > li {
-                cursor: pointer;
-                padding: 8px 0;
-                
-                // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-                box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-                margin-bottom: 2.3%;
-                font-size: 1.4rem;
-            }
-        
-            > li:nth-child(odd) {
-                // background-color: #a3927466;
-            }
+
+    .input-search {
+        width: 100%;
+    }
+
+    .songs-list {
+        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+        width: 100%;
+
+        > mat-list-item {
+            background-color: #444444;
+        }
+
+        > mat-list-item:nth-child(odd) {
+            background-color: #3d3d3d;
         }
     }
 
+    mat-list.songs-list.mat-list {
+        max-height: 80vh;
+        overflow: auto; 
+    }
 }    
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin-top: 8%;
+}

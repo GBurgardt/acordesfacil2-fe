@@ -24,10 +24,10 @@ export class AuthService {
                 }
             )
 
-    findSongs = (idArtist) => 
+    findSongs = (href) => 
         this.httpClient
             .get(
-                `${environment.WS_URL}/artists/${idArtist}`,
+                `${environment.WS_URL}/artists/${href}`,
                 {
                     headers: new HttpHeaders({
                         // 'Content-Type': 'application/json'

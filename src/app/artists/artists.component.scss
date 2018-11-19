@@ -1,41 +1,35 @@
+@import "../../variables.scss";
 
 .artists {
     display: flex;
-    @media (min-width: 700px) {
-        justify-content: center;
-    }
+    justify-content: center;
 
     .content {
-        // margin-top: 1.1%;
-        margin-top: 3.1%;
+
         display: flex;
         flex-direction: column;
+        margin-top: 3.1%;
 
-        @media (min-width: 700px) {
-            width: 35%;
-        }
-
-
-        @media (max-width: 500px) {
-            width: 100%;
-        }
+        width: 100%;
 
         .title-container {
-            text-align: center;
+            color: #69f0ae;
+            font-weight: 200;
+            display: flex;
+            justify-content: center;
+            font-size: 1.7rem;
 
-            // color: $goldenWheat;
+            padding-top: 16px;
 
-            font-size: 2.2rem;
-            font-weight: 479;
-            font-stretch: ultra-expanded;
+            .facil {
+                padding-left: 3px;
+            }
 
-            > p {
-                // margin: 1% 0 1%;
-                margin: 1% 0 0%;
-                font-size: 2.6rem;
-                // font-weight: 700;
+            .facil {
+                font-weight: bolder;
             }
         }
+
 
     }
 }
