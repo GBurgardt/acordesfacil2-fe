@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth-service';
+import { AuthService } from '../../services/auth-service';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UtilsService } from 'src/services/utilsService';
@@ -31,15 +31,17 @@ export class SongsListComponent implements OnInit {
                 this.hrefArtist = data.hrefArtist;
                 this.authService.findSongs(data.hrefArtist)
                     .subscribe((resp: any) => {
-                        this.songs = this.songsComplete = resp.songs.sort((a,b) => b.popularity - a.popularity)
-                        this.nameCurrentArtist = resp.name;
+                        // this.songs = this.songsComplete = resp.songs.sort((a,b) => b.popularity - a.popularity); // Popularity no existe más luego de la pérdida de la db de mongo
+                        this.songs = this.songsComplete = resp.songs;
+                        this.nameCurrentArtist = resp.artistName;
                     });
             });
     }
 
     onClickSong = (song) => {
-        console.log(song[`name`]);
-        this.router.navigate([`/${this.hrefArtist}/${song[`name`]}`])
+        // debugger;
+        // this.router.navigate([`/${this.hrefArtist}/${song[`name`]}`])
+        this.router.navigate([`${song[`href`]}`])
     }
 
     onSearch = (searchedText) => 

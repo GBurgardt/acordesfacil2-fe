@@ -24,7 +24,8 @@ const routes: Routes = [
                         component: SongsListComponent,
                     },
                     {
-                        path: ':nameSong',
+                        // path: ':nameSong',
+                        path: ':hrefSong',
                         component: VersionsComponent,
                     }
                 ]

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthService } from '../auth-service';
+import { AuthService } from '../../services/auth-service';
 import { UtilsService } from 'src/services/utilsService';
 
 @Component({
@@ -31,22 +31,28 @@ export class VersionsComponent implements OnInit {
             .subscribe(dataParent => {
                 this.route.params
                     .subscribe(data => {
-                        this.authService.findSongs(dataParent.hrefArtist)
-                            .subscribe((resp: any) => {
-                                this.nameCurrentArtist = resp.name
-                                this.currentSong = resp.songs.find(
-                                    song => song.name
-                                        .toLowerCase()
-                                        .normalize('NFD').replace(/[\u0300-\u036f]/g, "")
-                                        .trim() === data.nameSong
-                                                        .toLowerCase()
-                                                        .normalize('NFD').replace(/[\u0300-\u036f]/g, "")
-                                                        .trim()
-                                );
+                        this.authService
+                            .findPartitura(`/${dataParent.hrefArtist}/${data.hrefSong}`, 1)
+                            .subscribe(a => {
+                                debugger;
+                            })
 
-                                // TODO: Guardar en storage version seleccionada
-                                this.selectedVersion = this.currentSong.versions[0]
-                            });
+                        // this.authService.findSongs(dataParent.hrefArtist)
+                        //     .subscribe((resp: any) => {
+                        //         this.nameCurrentArtist = resp.name
+                        //         this.currentSong = resp.songs.find(
+                        //             song => song.name
+                        //                 .toLowerCase()
+                        //                 .normalize('NFD').replace(/[\u0300-\u036f]/g, "")
+                        //                 .trim() === data.nameSong
+                        //                                 .toLowerCase()
+                        //                                 .normalize('NFD').replace(/[\u0300-\u036f]/g, "")
+                        //                                 .trim()
+                        //         );
+
+                        //         // TODO: Guardar en storage version seleccionada
+                        //         this.selectedVersion = this.currentSong.versions[0]
+                        //     });
                     });
             })
     }

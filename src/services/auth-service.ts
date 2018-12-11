@@ -18,7 +18,6 @@ export class AuthService {
                 `${environment.WS_URL}/artists?search=${searchText}`,
                 {
                     headers: new HttpHeaders({
-                        // 'Content-Type': 'application/json'
                         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
                     })
                 }
@@ -30,13 +29,21 @@ export class AuthService {
                 `${environment.WS_URL}/artists/${href}`,
                 {
                     headers: new HttpHeaders({
-                        // 'Content-Type': 'application/json'
                         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
                     })
                 }
             )
-            // .get(`${environment.WS_URL}/artists/${idArtist}?search=${searchText}`)
-        
+
+    findPartitura = (hrefSong, idPartitura) => 
+        this.httpClient
+            .get(
+                `${environment.WS_URL}/artists${hrefSong}/${idPartitura}`,
+                {
+                    headers: new HttpHeaders({
+                        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                    })
+                }
+            )
             
 
 
