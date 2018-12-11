@@ -13,5 +13,5 @@ export class UtilsService {
 
             
     parseDecimal = (key) => Number(key).toFixed(2);
-    
 
+}

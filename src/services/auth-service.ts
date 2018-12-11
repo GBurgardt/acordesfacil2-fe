@@ -34,10 +34,32 @@ export class AuthService {
                 }
             )
 
-    findPartitura = (hrefSong, idPartitura) => 
+    findPartituraById = (hrefSong, idPartitura) => 
         this.httpClient
             .get(
-                `${environment.WS_URL}/artists${hrefSong}/${idPartitura}`,
+                `${environment.WS_URL}/versiones${hrefSong}/${idPartitura}`,
+                {
+                    headers: new HttpHeaders({
+                        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                    })
+                }
+            )
+
+    findPartituras = (hrefSong) => 
+        this.httpClient
+            .get(
+                `${environment.WS_URL}/versiones${hrefSong}`,
+                {
+                    headers: new HttpHeaders({
+                        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                    })
+                }
+            )
+
+    findInfoSong = (hrefSong) => 
+        this.httpClient
+            .get(
+                `${environment.WS_URL}/info${hrefSong}`,
                 {
                     headers: new HttpHeaders({
                         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'

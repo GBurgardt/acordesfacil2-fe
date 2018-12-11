@@ -11,12 +11,17 @@ import { UtilsService } from 'src/services/utilsService';
 export class VersionsComponent implements OnInit {
     @ViewChild("sheetContainer") versionBody: ElementRef;
 
-    nameCurrentArtist;
-    currentSong;
+    // nameCurrentArtist;
+    // currentSong;
     selectedVersion;
 
     slidingIntervalID = null;
     slidingVelocity = 1.5;
+
+
+    versions = [];
+
+    currentSongInfo;
 
     constructor(
         private authService: AuthService,
@@ -31,28 +36,28 @@ export class VersionsComponent implements OnInit {
             .subscribe(dataParent => {
                 this.route.params
                     .subscribe(data => {
+
+                        // Busca toda la info de las partituras para el select
                         this.authService
-                            .findPartitura(`/${dataParent.hrefArtist}/${data.hrefSong}`, 1)
-                            .subscribe(a => {
-                                debugger;
+                            .findPartituras(`/${dataParent.hrefArtist}/${data.hrefSong}`)
+                            .subscribe((versions: any) => {
+                                this.versions = versions;
                             })
 
-                        // this.authService.findSongs(dataParent.hrefArtist)
-                        //     .subscribe((resp: any) => {
-                        //         this.nameCurrentArtist = resp.name
-                        //         this.currentSong = resp.songs.find(
-                        //             song => song.name
-                        //                 .toLowerCase()
-                        //                 .normalize('NFD').replace(/[\u0300-\u036f]/g, "")
-                        //                 .trim() === data.nameSong
-                        //                                 .toLowerCase()
-                        //                                 .normalize('NFD').replace(/[\u0300-\u036f]/g, "")
-                        //                                 .trim()
-                        //         );
+                        
+                        // Busco la 1er parttura y la  seteo. Paralelamente busco las demas para que pueda cambiar
+                        this.authService
+                            .findPartituraById(`/${dataParent.hrefArtist}/${data.hrefSong}`, 1)
+                            .subscribe(ver => {
+                                this.selectedVersion = ver;
+                            })
 
-                        //         // TODO: Guardar en storage version seleccionada
-                        //         this.selectedVersion = this.currentSong.versions[0]
-                        //     });
+                        // Busca info de la cancion actual (nombre, artista)
+                        this.authService
+                            .findInfoSong(`/${dataParent.hrefArtist}/${data.hrefSong}`)
+                            .subscribe(infoSong => {
+                                this.currentSongInfo = infoSong;
+                            })
                     });
             })
     }
@@ -95,70 +100,21 @@ export class VersionsComponent implements OnInit {
      * 
      */
     magicFunction = (x) => (Math.cos(x) + 1) * 300
-            
-    test = () => Math.round(this.slidingVelocity * 100) / 100
+
+    onChangeVersion = (ver) => {
+        // Activo spinner (TODO: Poner un spinner mas lindo reemplazando solo la partitura, no todo)
+        this.selectedVersion = null;
+
+        // Busco la partitura buscada
+        this.authService
+            .findPartituraById(`/${this.currentSongInfo.hrefArtist}/${this.currentSongInfo.hrefSong}`, ver.idPartitura)
+            .subscribe(ver => {
+
+                this.selectedVersion = ver;
+
+                // Desactivo spinner
+
+            })
+    }
+
 }
-
-
-
-// setTimeout(() => {
-//     this.versionBody.nativeElement.scrollBy(0, 1);
-//     this.onClickPlay()
-// }, 350)
-
-
-// this.versionBody.nativeElement.scrollTo(
-//     0,
-//     this.slidingVelocity * count
-// )
-
-
-// if (this.slidingIntervalID) {
-//     clearInterval(this.slidingIntervalID)
-//     this.slidingIntervalID = null;
-// } else {
-
-//     this.slidingIntervalID = setInterval(
-//         () => { 
-
-//             // const getCurrentOffsetTop = (element: ElementRef) => {
-//             //     const rect = element.nativeElement.getBoundingClientRect();
-//             //     return rect.top + window.pageYOffset - document.documentElement.clientTop;
-//             // }
-
-//             // console.log(getCurrentOffsetTop(this.versionBody));
-
-
-//             this.versionBody.nativeElement.scrollBy({
-//                 top: this.slidingVelocity,
-//                 left: 0,
-//                 behavior: 'smooth'
-//             });
-//         }, 
-//         150
-//     )
-// }
-
-
-
-
-        
-
-        // if (this.slidingIntervalID) {
-        //     clearInterval(this.slidingIntervalID)
-        //     this.slidingIntervalID = null;
-        // } else {
-
-        //     this.slidingIntervalID = setInterval(
-        //         () => { 
-        //             setTimeout(() => {
-        //                 this.versionBody.nativeElement.scrollBy({
-        //                     top: this.slidingVelocity,
-        //                     left: 0,
-        //                     behavior: 'smooth'
-        //                 });
-        //             }, 2000)
-        //         }, 
-        //         50
-        //     )
-        // }

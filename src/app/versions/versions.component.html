@@ -1,10 +1,10 @@
-<div *ngIf="currentSong" class="versions">
+<div *ngIf="currentSongInfo && selectedVersion" class="versions">
 
     <div class="versions-content">
 
         <div class="badges-container">
-            <badge-item [text]="nameCurrentArtist"></badge-item>
-            <badge-item [text]="currentSong.name"></badge-item>
+            <badge-item [text]="currentSongInfo.artist"></badge-item>
+            <badge-item [text]="currentSongInfo.name"></badge-item>
         </div>
 
         <div class="options-container">
@@ -42,10 +42,10 @@
                 </div>
             </div>
             <div class="versions-select-container">
-                <div    *ngFor="let ver of currentSong.versions" 
-                        (click)="selectedVersion = ver" 
+                <div    *ngFor="let ver of versions" 
+                        (click)="onChangeVersion(ver)" 
                         class="version-item"
-                        [ngClass]="{'version-item': true, 'version-item-select': selectedVersion.priority === ver.priority}"
+                        [ngClass]="{'version-item': true, 'version-item-select': selectedVersion.idPartitura === ver.idPartitura.toString()}"
                         >
                     {{ 
                         ver.sheetType === 'H' ? 'V' :
@@ -58,13 +58,12 @@
             </div>
         </div>
 
-
-        <div #sheetContainer class="sheet-container" [innerHTML]="selectedVersion.sheet">
-        </div>
+        <!-- Partitura -->
+        <div #sheetContainer class="sheet-container" [innerHTML]="selectedVersion.body"></div>
 
     </div>
 </div>
 
-<div *ngIf="!(currentSong)" class="spinner-container">
+<div *ngIf="!(currentSongInfo && selectedVersion)" class="spinner-container">
     <spinner-item></spinner-item>
 </div>
