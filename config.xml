@@ -33,5 +33,5 @@
         <icon density="xxxhdpi" src="res/newIcon/android/mipmap-xxxhdpi/icon.png" />
     </platform>
     <plugin name="cordova-plugin-browsersync" spec="^1.1.0" />
-    <engine name="android" spec="^7.1.1" />
+    <engine name="android" spec="^7.1.4" />
 </widget>
