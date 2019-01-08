@@ -41,21 +41,33 @@
                     </div>
                 </div>
             </div>
-            <div class="versions-select-container">
-                <div    *ngFor="let ver of versions" 
-                        (click)="onChangeVersion(ver)" 
-                        class="version-item"
-                        [ngClass]="{'version-item': true, 'version-item-select': selectedVersion.idPartitura === ver.idPartitura.toString()}"
-                        >
-                    {{ 
-                        ver.sheetType === 'H' ? 'V' :
-                        ver.sheetType === 'K' ? 'P' :
-                        ver.sheetType === 'R' ? 'G' :
-                        ver.sheetType
-                    }}
+
+            <div class="menu-right">
+                <div class="versions-select-container">
+                    <div    *ngFor="let ver of versions" 
+                            (click)="onChangeVersion(ver)" 
+                            class="version-item"
+                            [ngClass]="{'version-item': true, 'version-item-select': selectedVersion.idPartitura === ver.idPartitura.toString()}"
+                            >
+                        {{ 
+                            ver.sheetType === 'H' ? 'V' :
+                            ver.sheetType === 'K' ? 'P' :
+                            ver.sheetType === 'R' ? 'G' :
+                            ver.sheetType
+                        }}
+                    </div>
+                    
                 </div>
-                
+
+                <div class="divider"> | </div>
+
+                <div class="btn-fav-add">
+                    <i class="far fa-star"></i>
+                    <!-- <i class="fas fa-star"></i> -->
+                </div>
+
             </div>
+
         </div>
 
         <!-- Partitura -->

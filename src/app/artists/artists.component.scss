@@ -5,18 +5,52 @@
     justify-content: center;
     flex-direction: column;
 
-    // .fav-container {
-    //     display: flex;
-    //     justify-content: center;
-    //     margin: 0rem 0rem 0.5rem;
-    //     padding: 0.2rem 0rem 0.3rem;
-    //     font-size: 1.4rem;
-    //     color: #02e4a5;
-    //     border-top: solid 0.1rem;
-    //     border-radius: 0px;
-    //     opacity: 0.9;
-    //     cursor: pointer;
-    // }
+    .fav-container {
+        
+        display: flex;
+        flex-direction: column;
+
+        .btn-fav-container {
+            display: flex;
+            justify-content: center;
+            margin: 0rem 0rem 0.5rem;
+            padding: 0.2rem 0rem 0.3rem;
+            font-size: 1.4rem;
+            color: #69f0ae;
+            border-top: solid 0.1rem;
+            border-radius: 0px;
+            opacity: 0.9;
+            cursor: pointer;
+        }
+
+        .btn-fav-container:focus {
+            outline: none;
+        }
+
+        .fav-list {
+            overflow: auto;
+            transition:all 0.3s ease;
+            max-height: 0px;
+            
+            border-top: solid 0.1rem #69f0ae;
+            border-left: solid 0.1rem #69f0ae;
+            border-right: solid 0.2rem #69f0ae;
+
+            .fav-item {
+                padding: 0.5rem 0.5rem;
+                cursor: pointer;
+            }
+
+            .fav-item:nth-child(odd) {
+                background: #404040;
+            }
+        }
+
+        .fav-list-open {
+            max-height: 280px;
+        }
+
+    }
 
     .content {
 
@@ -33,7 +67,7 @@
             justify-content: center;
             font-size: 1.7rem;
 
-            padding-top: 16px;
+            // padding-top: 16px;
 
             .facil {
                 padding-left: 3px;

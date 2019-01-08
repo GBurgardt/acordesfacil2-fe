@@ -24,6 +24,7 @@ import {
 } from '@angular/material';
 import { SpinnerItemComponent } from './spinner-item/spinner-item.component';
 import { UtilsService } from 'src/services/utilsService';
+import { LocalStorageService } from 'src/services/local-storage.service';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { UtilsService } from 'src/services/utilsService';
         MatSelectModule
     ],
     providers: [
-        UtilsService
+        UtilsService,
+        LocalStorageService
     ],
     bootstrap: [AppComponent]
 })

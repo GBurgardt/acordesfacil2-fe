@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth-service';
 import { environment } from 'src/environments/environment';
+import { LocalStorageService } from 'src/services/local-storage.service';
 
 @Component({
     selector: 'app-artists',
@@ -8,24 +9,21 @@ import { environment } from 'src/environments/environment';
     styleUrls: ['./artists.component.scss']
 })
 export class ArtistsComponent {
-    // artists = [];
-    // searchText: String;
+    // Bandera favoritos abierto/cerrado
+    isFavOpen = false
+
+    // Favoritos
+    favorites = [];
     
     constructor(
-        private authService: AuthService
+        private localStorageService: LocalStorageService
     ) { }
 
-    // onSearch = (newSearchText) => 
-    //     this.authService.debounce(
-    //         () => newSearchText && newSearchText.length > 0 ?
-    //             this.authService.findArtist(newSearchText).subscribe((art: any) => this.artists = art) :
-    //             this.artists = [],
-    //         environment.TIME_DEBOUNCE
-    //     )()
+    ngOnInit() {
+        this.favorites = this.localStorageService.getFavorites();
+    }
 
-    // onClickArtist = (artist) => {
-    //     console.log(artist);
-    // }
-        
-
+    fafa() {
+        console.log('ofjaojfasjoasfjo')
+    }
 }

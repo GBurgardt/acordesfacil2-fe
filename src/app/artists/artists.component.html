@@ -1,7 +1,28 @@
 <div class="artists">
-    
+
     <div class="fav-container">
-        <i class="fas fa-star"></i>
+
+        <div 
+            [ngClass]="{'fav-list': true, 'fav-list-open': isFavOpen, 'third': false}"
+            >
+            <div
+                *ngFor="let fav of favorites"
+                (click)="openFavorite(fav)" 
+                class="fav-item"
+                > 
+                fa
+                <!-- { fav }  -->
+            </div>
+        </div>
+
+        <div
+            (click)="isFavOpen = !isFavOpen" 
+            (blur)="isFavOpen = !isFavOpen" 
+            tabindex="1"
+            class="btn-fav-container"
+            >
+            <i class="fas fa-star"></i>
+        </div>
     </div>
 
     <div class="content">

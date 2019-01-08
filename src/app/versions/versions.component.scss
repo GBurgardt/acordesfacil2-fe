@@ -73,27 +73,19 @@
 
             }
 
-            .versions-select-container {
+            .menu-right {
                 display: flex;
-                justify-content: flex-end;
-    
-                // .version-item {
-                //     color: #e0e0e0;
-                //     border: solid #e0e0e0 2px;
-                //     font-weight: bold;
-                //     margin: 9px 3px 0px;
-                //     // padding: 2px 8px 2px 8px;
-                //     padding: 1px 7px 0px 6px;
-                //     border-radius: 16px;
-                // }
-    
-                // .version-item-select {
-                //     color: #00d484;
-                //     border: solid #00d484 2px;
-                // }
+                color: #00d484;
+
+                .versions-select-container {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+                .btn-fav-add, .divider {
+                    margin-top: 9px;
+                }
             }
-
-
             .version-item {
                 color: #e0e0e0;
                 border: solid #e0e0e0 2px;
@@ -108,6 +100,8 @@
                 color: #00d484;
                 border: solid #00d484 2px;
             }
+
+
         }
 
 
