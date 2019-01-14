@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../../services/auth-service';
 import { UtilsService } from 'src/services/utilsService';
+import { LocalStorageService } from 'src/services/local-storage.service';
 
 @Component({
     selector: 'app-versions',
@@ -27,37 +28,54 @@ export class VersionsComponent implements OnInit {
         private authService: AuthService,
         private route: ActivatedRoute,        
         private router: Router,
-        private utilsService: UtilsService
+        private utilsService: UtilsService,
+        private localStorageService: LocalStorageService
     ) { }
 
 
     ngOnInit() {
+
+        
+
         this.route.parent.params
             .subscribe(dataParent => {
                 this.route.params
                     .subscribe(data => {
 
-                        // Busca toda la info de las partituras para el select
-                        this.authService
-                            .findPartituras(`/${dataParent.hrefArtist}/${data.hrefSong}`)
-                            .subscribe((versions: any) => {
-                                this.versions = versions;
-                            })
+                        // Me fijo en los queryParams para ver si es modo offline o online
+                        this.route.queryParams.subscribe(params => {
+                            
+                            // Si es offline, busco la version dada en las query en el localstorage. Sino, procedo normal en el else.
+                            if (params && params.mode === 'offline') {
+                                this.selectedVersion = this.localStorageService.getVersionOfFav(dataParent.hrefArtist, data.hrefSong, params.idPartitura);
 
-                        
-                        // Busco la 1er parttura y la  seteo. Paralelamente busco las demas para que pueda cambiar
-                        this.authService
-                            .findPartituraById(`/${dataParent.hrefArtist}/${data.hrefSong}`, 1)
-                            .subscribe(ver => {
-                                this.selectedVersion = ver;
-                            })
+                                this.currentSongInfo = this.localStorageService.getInfoSongOffline(dataParent.hrefArtist, data.hrefSong)
+                            } else {
 
-                        // Busca info de la cancion actual (nombre, artista)
-                        this.authService
-                            .findInfoSong(`/${dataParent.hrefArtist}/${data.hrefSong}`)
-                            .subscribe(infoSong => {
-                                this.currentSongInfo = infoSong;
-                            })
+                                // Busca toda la info de las partituras para el select
+                                this.authService
+                                    .findPartituras(`/${dataParent.hrefArtist}/${data.hrefSong}`)
+                                    .subscribe((versions: any) => {
+                                        this.versions = versions;
+                                    })
+                                
+                                // Busco la 1er parttura y la  seteo. Paralelamente busco las demas para que pueda cambiar
+                                this.authService
+                                    .findPartituraById(`/${dataParent.hrefArtist}/${data.hrefSong}`, 1)
+                                    .subscribe(ver => {
+                                        this.selectedVersion = ver;
+                                    })
+        
+                                // Busca info de la cancion actual (nombre, artista)
+                                this.authService
+                                    .findInfoSong(`/${dataParent.hrefArtist}/${data.hrefSong}`)
+                                    .subscribe(infoSong => {
+                                        this.currentSongInfo = infoSong;
+                                    })
+                            }
+
+                        })
+
                     });
             })
     }
@@ -115,6 +133,10 @@ export class VersionsComponent implements OnInit {
                 // Desactivo spinner
 
             })
+    }
+
+    onClickAddFavorito = () => {
+        this.localStorageService.toggleFavorite(this.selectedVersion, this.currentSongInfo);
     }
 
 }

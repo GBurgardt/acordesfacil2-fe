@@ -7,11 +7,18 @@
             >
             <div
                 *ngFor="let fav of favorites"
-                (click)="openFavorite(fav)" 
                 class="fav-item"
                 > 
-                fa
-                <!-- { fav }  -->
+                {{ fav.artist }}, {{fav.name }}
+                <div
+                    class="fav-versiones-container">
+                    <div
+                        *ngFor="let ver of fav.versions"
+                        (click)="openFavorite(fav, ver)"
+                        class="fav-subitem">
+                        Version: {{ ver.idPartitura }}
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -27,11 +34,11 @@
 
     <div class="content">
         <!-- TODO: Comentado en CN, después descomento -->
-        <div class="title-container">
+        <!-- <div class="title-container">
             <div class="a">A</div>
             <div>cordes</div>
             <div class="facil">Facil</div>
-        </div>
+        </div> -->
 
         <router-outlet></router-outlet>
 

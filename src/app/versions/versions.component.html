@@ -59,11 +59,12 @@
                     
                 </div>
 
-                <div class="divider"> | </div>
+                <div class="divider right-item"> | </div>
 
-                <div class="btn-fav-add">
-                    <i class="far fa-star"></i>
-                    <!-- <i class="fas fa-star"></i> -->
+                <!-- *ngIf="localStorageService.getIfVersionIsInFav(selectedVersion, currentSongInfo)" -->
+                <div (click)="onClickAddFavorito()" class="btn-fav-add right-item">
+                    <i *ngIf="!localStorageService.getIfVersionIsInFav(selectedVersion, currentSongInfo)" class="far fa-star"></i>
+                    <i *ngIf="localStorageService.getIfVersionIsInFav(selectedVersion, currentSongInfo)" class="fas fa-star"></i>
                 </div>
 
             </div>

@@ -39,10 +39,33 @@
             .fav-item {
                 padding: 0.5rem 0.5rem;
                 cursor: pointer;
+                background: #303030;
+
+                .fav-versiones-container {
+                    margin: 0.7rem 0 0.7rem 0.7rem;
+                    border-left: solid 2px #69f0ae;
+
+                    .fav-subitem:nth-child(odd) {
+                        background: #404040;
+                    }
+                    .fav-subitem {
+                        padding: 0.5rem 0.2rem 0.5rem 0.5rem;
+                        background: #303030;
+                    }
+                }
             }
 
             .fav-item:nth-child(odd) {
                 background: #404040;
+
+                .fav-versiones-container {
+                    .fav-subitem:nth-child(odd) {
+                        background: #303030;
+                    }
+                    .fav-subitem {
+                        background: #404040;
+                    }
+                }
             }
         }
 

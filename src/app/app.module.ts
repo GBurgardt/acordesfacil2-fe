@@ -26,8 +26,6 @@ import { SpinnerItemComponent } from './spinner-item/spinner-item.component';
 import { UtilsService } from 'src/services/utilsService';
 import { LocalStorageService } from 'src/services/local-storage.service';
 
-import { OAuthModule } from 'angular-oauth2-oidc';
-
 
 @NgModule({
     declarations: [
@@ -51,8 +49,7 @@ import { OAuthModule } from 'angular-oauth2-oidc';
         MatFormFieldModule,
         MatInputModule,
         MatListModule,
-        MatSelectModule,
-        OAuthModule.forRoot()
+        MatSelectModule
     ],
     providers: [
         UtilsService,
