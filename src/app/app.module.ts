@@ -25,6 +25,13 @@ import {
 import { SpinnerItemComponent } from './spinner-item/spinner-item.component';
 import { UtilsService } from 'src/services/utilsService';
 import { LocalStorageService } from 'src/services/local-storage.service';
+import { GoogleOauthService } from 'src/services/google-oauth.service';
+import { FirebaseService } from 'src/services/firebase.service';
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from 'src/environments/environment';
 
 
 @NgModule({
@@ -49,11 +56,16 @@ import { LocalStorageService } from 'src/services/local-storage.service';
         MatFormFieldModule,
         MatInputModule,
         MatListModule,
-        MatSelectModule
+        MatSelectModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFirestoreModule,
+        AngularFireAuthModule
     ],
     providers: [
         UtilsService,
-        LocalStorageService
+        LocalStorageService,
+        GoogleOauthService,
+        FirebaseService
     ],
     bootstrap: [AppComponent]
 })

@@ -3,10 +3,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { timeout } from 'q';
 
+// declare var cordova: any;
+
 @Injectable({
     providedIn: 'root'
 })
 export class AuthService {
+
 
     constructor(
         private httpClient: HttpClient
@@ -66,9 +69,6 @@ export class AuthService {
                     })
                 }
             )
-            
-
-
 
     ////////////////////////////////////////////////////////////////////////////////
     /////////////////////////           U T I L S       ////////////////////////////
@@ -78,20 +78,31 @@ export class AuthService {
     debounce = (func, wait, immediate?) => 
         ( ...args ) => {
             const context = this;
-
+            
             const callNow = immediate && !this.timeout;
-
+            
             clearTimeout(this.timeout);   
-
+            
             this.timeout = setTimeout(function() {
                 this.timeout = null;
-    
-                 if (!immediate) {
-                   func.apply(context, args);
-                 }
+                
+                if (!immediate) {
+                    func.apply(context, args);
+                }
             }, wait);
-    
+            
             if (callNow) func.apply(context, args);  
-         }; 
+        }; 
+        
+    ////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////           O A U T H       ////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////
+
     
+    // isAvailable = () => {
+        
+    //     const w: any = cordova;
+    //     debugger;
+    //     cordova.plugins.googleplus.isAvailable(function(avail) {alert(avail)});
+    // }
 }

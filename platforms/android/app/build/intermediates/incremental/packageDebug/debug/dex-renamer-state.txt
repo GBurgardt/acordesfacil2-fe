@@ -1,4 +1,4 @@
-#Mon Jan 07 23:09:41 ART 2019
+#Sun Feb 10 02:00:46 ART 2019
 base.0=/home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

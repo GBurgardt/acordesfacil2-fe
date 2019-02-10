@@ -86,6 +86,17 @@
                 .btn-fav-add, .divider {
                     margin-top: 9px;
                 }
+
+                .version-offline-info {
+                    padding: 11px 6px 0px 6px;
+                    
+                    span {
+                        color: #dfdfdf;
+                        font-weight: bold;
+                        font-size: 0.9rem;
+                        margin-top: 18px;
+                    }
+                }
             }
             .version-item {
                 color: #e0e0e0;

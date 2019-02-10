@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { FirebaseService } from './firebase.service';
 
 @Injectable({
     providedIn: 'root'
@@ -8,7 +9,7 @@ export class LocalStorageService {
 
     private favoritosSubject = new Subject<any>();
 
-    constructor() { }
+    constructor(private firebaseService: FirebaseService) { }
 
     /**
      * Setear algo en el localStorage, puede ser un json
@@ -99,6 +100,17 @@ export class LocalStorageService {
             newFavoritos
         );
 
+        // Tambien lo guardo en firebase (si y solo si está logueado con Google)
+        const currentUserEmail = this.getObject('currentGoogleUser') ? 
+            this.getObject('currentGoogleUser').email : null;
+
+        if (currentUserEmail) {
+            this.firebaseService.updateFavoritesByEmail(
+                currentUserEmail,
+                newFavoritos
+            )
+        }
+
         // Actualizo el subject de favoritos para los que escuchan (artistsPage) puedan actualizar
         this.favoritosSubject.next(newFavoritos);
     }
@@ -134,8 +146,8 @@ export class LocalStorageService {
                 songFav.hrefArtist === hrefArtist && 
                 songFav.hrefSong === hrefSong
         );
-
-        return currentSong.versions.find(ver => ver.idPartitura === idPartitura)
+            // debugger;
+        return currentSong.versions.find(ver => ver.idPartitura.toString() === idPartitura.toString())
     }
 
     /**

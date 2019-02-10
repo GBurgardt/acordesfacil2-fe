@@ -10,7 +10,14 @@
     "cordova-plugin-browsersync": {
       "PACKAGE_NAME": "io.cordova.acordesfacil"
     },
+    "cordova-plugin-googleplus": {
+      "PLAY_SERVICES_VERSION": "11.8.0",
+      "PACKAGE_NAME": "io.cordova.acordesfacil"
+    },
     "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.cordova.acordesfacil"
+    },
+    "cordova-plugin-device": {
       "PACKAGE_NAME": "io.cordova.acordesfacil"
     }
   },

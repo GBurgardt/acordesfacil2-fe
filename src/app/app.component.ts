@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GoogleOauthService } from 'src/services/google-oauth.service';
 
 @Component({
     selector: 'app-root',
@@ -6,6 +7,13 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    title = 'fe';
 
+    constructor(
+        private googleOauthService: GoogleOauthService
+    ) {}
+
+    ngOnInit = () => {
+        // this.googleOauthService.initializeFirebase();
+        // this.googleOauthService.testFire();
+    }
 }

@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../../services/auth-service';
 import { UtilsService } from 'src/services/utilsService';
 import { LocalStorageService } from 'src/services/local-storage.service';
+import { AcordesService } from '../services/acordes.service';
 
 @Component({
     selector: 'app-versions',
@@ -12,30 +13,30 @@ import { LocalStorageService } from 'src/services/local-storage.service';
 export class VersionsComponent implements OnInit {
     @ViewChild("sheetContainer") versionBody: ElementRef;
 
-    // nameCurrentArtist;
-    // currentSong;
     selectedVersion;
-
     slidingIntervalID = null;
     slidingVelocity = 1.5;
-
-
     versions = [];
-
     currentSongInfo;
+
+    // Cantidad de tonos sumados o restados al original
+    deltaTone = 0;
 
     constructor(
         private authService: AuthService,
         private route: ActivatedRoute,        
-        private router: Router,
-        private utilsService: UtilsService,
-        private localStorageService: LocalStorageService
+        private utilsService: UtilsService, // Se usa en html
+        private localStorageService: LocalStorageService,
+        private acordesService: AcordesService
     ) { }
 
 
     ngOnInit() {
 
-        
+        // setTimeout(() => {
+            
+        //     this.acordesService.guessTone(this.selectedVersion.body)
+        // }, 1800);
 
         this.route.parent.params
             .subscribe(dataParent => {
@@ -48,23 +49,24 @@ export class VersionsComponent implements OnInit {
                             // Si es offline, busco la version dada en las query en el localstorage. Sino, procedo normal en el else.
                             if (params && params.mode === 'offline') {
                                 this.selectedVersion = this.localStorageService.getVersionOfFav(dataParent.hrefArtist, data.hrefSong, params.idPartitura);
-
-                                this.currentSongInfo = this.localStorageService.getInfoSongOffline(dataParent.hrefArtist, data.hrefSong)
+                                this.currentSongInfo = this.localStorageService.getInfoSongOffline(dataParent.hrefArtist, data.hrefSong);
                             } else {
-
                                 // Busca toda la info de las partituras para el select
                                 this.authService
                                     .findPartituras(`/${dataParent.hrefArtist}/${data.hrefSong}`)
                                     .subscribe((versions: any) => {
                                         this.versions = versions;
+
+                                        // Busco la 1er partitura y la seteo. 
+                                        this.authService
+                                            .findPartituraById(`/${dataParent.hrefArtist}/${data.hrefSong}`, 1)
+                                            .subscribe(ver => {
+                                                const infoParti = this.versions.find(ver => ver.idPartitura === 1)
+
+                                                this.selectedVersion = {...ver, ...infoParti}
+                                            })
                                     })
                                 
-                                // Busco la 1er parttura y la  seteo. Paralelamente busco las demas para que pueda cambiar
-                                this.authService
-                                    .findPartituraById(`/${dataParent.hrefArtist}/${data.hrefSong}`, 1)
-                                    .subscribe(ver => {
-                                        this.selectedVersion = ver;
-                                    })
         
                                 // Busca info de la cancion actual (nombre, artista)
                                 this.authService
@@ -89,7 +91,8 @@ export class VersionsComponent implements OnInit {
         // Si apretó click y está en pausa, quiere decir que acaba de apretar PLAY
         if (!this.isPlaying) {
             this.isPlaying = true;
-            this.scrollear();
+            // this.acordesService.scrollear(this.isPlaying, this.versionBody, this.slidingVelocity);
+            this.scrollear()
         } else {
             this.isPlaying = false;
         }
@@ -102,22 +105,14 @@ export class VersionsComponent implements OnInit {
         this.isPlaying ?
             setTimeout(
                 () => {
-                    console.log('Scrolling..')
-                    console.log(this.magicFunction(this.slidingVelocity))
-
                     this.versionBody.nativeElement.scrollBy(0, 1);
                     this.scrollear()
                 }, 
-                this.magicFunction(this.slidingVelocity)
+                this.acordesService.magicFunction(this.slidingVelocity)
             )
             :
             null // Fin del scroll
 
-
-    /**
-     * 
-     */
-    magicFunction = (x) => (Math.cos(x) + 1) * 300
 
     onChangeVersion = (ver) => {
         // Activo spinner (TODO: Poner un spinner mas lindo reemplazando solo la partitura, no todo)
@@ -126,17 +121,25 @@ export class VersionsComponent implements OnInit {
         // Busco la partitura buscada
         this.authService
             .findPartituraById(`/${this.currentSongInfo.hrefArtist}/${this.currentSongInfo.hrefSong}`, ver.idPartitura)
-            .subscribe(ver => {
-
-                this.selectedVersion = ver;
-
-                // Desactivo spinner
-
+            .subscribe(verObtenida => {
+                this.selectedVersion = {
+                    ...verObtenida,
+                    ...ver
+                };
             })
     }
 
     onClickAddFavorito = () => {
         this.localStorageService.toggleFavorite(this.selectedVersion, this.currentSongInfo);
+    }
+
+
+    actualizarTonos = (upOrDown) => {
+
+        // this.deltaTone = this.deltaTone + cambio;
+
+        this.selectedVersion.body = 
+            this.acordesService.changeTonePartitura(this.selectedVersion.body, upOrDown);
     }
 
 }

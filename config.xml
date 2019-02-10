@@ -33,5 +33,11 @@
         <icon density="xxxhdpi" src="res/newIcon/android/mipmap-xxxhdpi/icon.png" />
     </platform>
     <plugin name="cordova-plugin-browsersync" spec="^1.1.0" />
+    <plugin name="cordova-plugin-googleplus" spec="7.0.0">
+        <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.135919474085-4khvdg6ho1aebn5vkr03tumk82cfvs1o" />
+        <variable name="WEB_APPLICATION_CLIENT_ID" value="836740064251-tf5u1204td27p00cae0fc43hv4ghc6fc.apps.googleusercontent.com" />
+        <variable name="PLAY_SERVICES_VERSION" value="11.8.0" />
+    </plugin>
+    <plugin name="cordova-plugin-device" spec="^2.0.2" />
     <engine name="android" spec="^7.1.4" />
 </widget>

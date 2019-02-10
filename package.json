@@ -8,6 +8,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --base-href . --output-path ../fe/www/",
+    "builddev": "ng build --base-href . --output-path ../fe/www/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -16,11 +17,12 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "dependencies": {
-    "@angular/animations": "^7.0.2",
+    "@angular/animations": "^7.2.4",
     "@angular/cdk": "^7.0.3",
     "@angular/common": "~7.0.0",
     "@angular/compiler": "~7.0.0",
-    "@angular/core": "~7.0.0",
+    "@angular/core": "~7.2.4",
+    "@angular/fire": "^5.1.1",
     "@angular/forms": "~7.0.0",
     "@angular/http": "~7.0.0",
     "@angular/material": "^7.0.3",
@@ -33,11 +35,13 @@
     "cordova-android": "^7.1.4",
     "cordova-browser": "^5.0.4",
     "cordova-plugin-browsersync": "^1.1.0",
-    "cordova-plugin-googleplus": "^7.0.0",
+    "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-googleplus": "7.0.0",
     "cordova-plugin-whitelist": "^1.3.3",
     "core-js": "^2.5.4",
     "csp-parse": "0.0.2",
     "elementtree": "^0.1.7",
+    "firebase": "^5.8.2",
     "glob": "^5.0.15",
     "hammerjs": "^2.0.8",
     "milligram": "^1.3.0",
@@ -71,7 +75,13 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {},
-      "cordova-plugin-browsersync": {}
+      "cordova-plugin-browsersync": {},
+      "cordova-plugin-googleplus": {
+        "REVERSED_CLIENT_ID": "com.googleusercontent.apps.135919474085-4khvdg6ho1aebn5vkr03tumk82cfvs1o",
+        "WEB_APPLICATION_CLIENT_ID": "836740064251-tf5u1204td27p00cae0fc43hv4ghc6fc.apps.googleusercontent.com",
+        "PLAY_SERVICES_VERSION": "11.8.0"
+      },
+      "cordova-plugin-device": {}
     },
     "platforms": [
       "android"

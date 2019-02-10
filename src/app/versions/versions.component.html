@@ -24,44 +24,46 @@
                     </div>
                 </div>
                 <div class="utils-section">
-                    <!-- <div (click)="test = !test" class="utils-item" style="margin: 10.8px 0 0 0;">
-                        <a class="version-item note-selected">T</a>
-                    </div> -->
                     
                     <div (click)="test = !test" class="utils-item" style="margin: 10.8px 0 0 0;">
                         <i class="fas fa-music version-item note-selected"></i>
                     </div>
     
                     <div *ngIf="test" class="velocity-container">
-                        <i (click)="this.slidingVelocity = this.slidingVelocity - .2" class="fas fa-minus"></i>
-                        <p>{{ 
-                            utilsService.parseDecimal(this.slidingVelocity)
-                        }}</p>
-                        <i (click)="this.slidingVelocity = this.slidingVelocity + .2" class="fas fa-plus"></i>
+                        <i (click)="actualizarTonos('down')" class="fas fa-minus"></i>
+                        <!-- <p>{{ 
+                                deltaTone
+                        }}</p> -->
+                        <i (click)="actualizarTonos('up')" class="fas fa-plus"></i>
                     </div>
                 </div>
             </div>
 
             <div class="menu-right">
-                <div class="versions-select-container">
+                <div 
+                    *ngIf="versions && versions.length > 0"
+                    class="versions-select-container">
                     <div    *ngFor="let ver of versions" 
                             (click)="onChangeVersion(ver)" 
                             class="version-item"
-                            [ngClass]="{'version-item': true, 'version-item-select': selectedVersion.idPartitura === ver.idPartitura.toString()}"
+                            [ngClass]="{'version-item': true, 'version-item-select': selectedVersion.idPartitura.toString() === ver.idPartitura.toString()}"
                             >
                         {{ 
-                            ver.sheetType === 'H' ? 'V' :
-                            ver.sheetType === 'K' ? 'P' :
-                            ver.sheetType === 'R' ? 'G' :
-                            ver.sheetType
+                            acordesService.getLetraInstru(ver.sheetType)
                         }}
-                    </div>
-                    
+                    </div>   
+                </div>
+
+                <div 
+                    *ngIf="!versions || versions.length <= 0"
+                    class="version-offline-info">
+                    <span>
+                        {{ acordesService.getInstruDescrip(selectedVersion.sheetType) }}
+                    </span>
                 </div>
 
                 <div class="divider right-item"> | </div>
 
-                <!-- *ngIf="localStorageService.getIfVersionIsInFav(selectedVersion, currentSongInfo)" -->
                 <div (click)="onClickAddFavorito()" class="btn-fav-add right-item">
                     <i *ngIf="!localStorageService.getIfVersionIsInFav(selectedVersion, currentSongInfo)" class="far fa-star"></i>
                     <i *ngIf="localStorageService.getIfVersionIsInFav(selectedVersion, currentSongInfo)" class="fas fa-star"></i>

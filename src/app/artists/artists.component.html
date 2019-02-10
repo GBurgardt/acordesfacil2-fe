@@ -12,11 +12,12 @@
                 {{ fav.artist }}, {{fav.name }}
                 <div
                     class="fav-versiones-container">
+                    <!-- Acá se pone mousedown en vez de div para que dispare antes que el blur/click del btn-fav-container -->
                     <div
                         *ngFor="let ver of fav.versions"
-                        (click)="openFavorite(fav, ver)"
+                        (mousedown)="openFavorite(fav, ver)"
                         class="fav-subitem">
-                        Version: {{ ver.idPartitura }}
+                        {{ acordesService.getInstruDescrip(ver.sheetType) }}
                     </div>
                 </div>
             </div>
@@ -34,13 +35,20 @@
 
     <div class="content">
         <!-- TODO: Comentado en CN, después descomento -->
-        <!-- <div class="title-container">
+        <div class="title-container">
             <div class="a">A</div>
             <div>cordes</div>
             <div class="facil">Facil</div>
-        </div> -->
+        </div>
 
         <router-outlet></router-outlet>
 
     </div>
+<!-- 
+    <div class="test-container">
+        <button (click)="test()">
+            Test
+        </button>
+    </div> -->
+
 </div>

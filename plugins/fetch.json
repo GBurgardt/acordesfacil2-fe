@@ -14,5 +14,24 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-googleplus": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-googleplus@^7.0.0"
+    },
+    "is_top_level": true,
+    "variables": {
+      "REVERSED_CLIENT_ID": "com.googleusercontent.apps.135919474085-4khvdg6ho1aebn5vkr03tumk82cfvs1o",
+      "WEB_APPLICATION_CLIENT_ID": "836740064251-tf5u1204td27p00cae0fc43hv4ghc6fc.apps.googleusercontent.com"
+    }
+  },
+  "cordova-plugin-device": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-device"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

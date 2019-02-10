@@ -1,13 +1,32 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
+ADDED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
+MERGED from [com.google.android.gms:play-services-auth:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/d5c5c0b1cc7dc6d562403953851206bb/AndroidManifest.xml:17:1-39:12
+MERGED from [com.google.android.gms:play-services-identity:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-identity-11.8.0.aar/bed054d06f6e7da1bb29327ab87cadec/AndroidManifest.xml:17:1-24:12
 MERGED from [:CordovaLib] /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:20:1-27:12
-INJECTED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-11.8.0.aar/64a8acece48f6d57ed3549921ef2b35c/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-11.8.0.aar/d49957ebd05466ed8e44b5ce0272ad34/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/8a8f96449c8096e7af4bc293cb96e748/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/2a906768c5804d5aed93148bbf2b8b72/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/3411b7633cebea78a31da7121ac66cb2/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-identity-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-identity-license-11.8.0.aar/5882dbdd233a3e1f8bf771bb7df03884/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-11.8.0.aar/1ff98ae4d6a2c8dda4d6fc1477eb4da8/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-license-11.8.0.aar/d293d60a8ba4029f7f961066596006dc/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/91b1eac5a6be7da2296ae04d9812b079/AndroidManifest.xml:2:1-6:12
+MERGED from [com.android.support:support-v4:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/b9d216079040505b1dc2c9d63f47cb41/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/1fdfb9436495fadf344a5b9aa197819f/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/671e52c9fc2389a4d682a47d41bc0031/AndroidManifest.xml:2:1-6:12
+MERGED from [com.android.support:support-fragment:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/2b88d9cfab6a3faa763c6300d0dcc1fa/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-media-compat:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/ead518fda665930444edf6499dbe02a6/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-utils:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/016a32322f0d969d52d630ca15a2e65f/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-ui:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/128f3521e5a57cf5935eb35c8053837b/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-compat:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/4457f96cb96f94d2f2b5c85200357ac1/AndroidManifest.xml:17:1-27:12
+INJECTED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
 	package
 		ADDED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:2:102-135
 		INJECTED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml
@@ -44,6 +63,40 @@ ADDED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/ap
 		ADDED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:4:22-64
 application
 ADDED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:5:5-12:19
+MERGED from [com.google.android.gms:play-services-auth:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/d5c5c0b1cc7dc6d562403953851206bb/AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-auth:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/d5c5c0b1cc7dc6d562403953851206bb/AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-identity:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-identity-11.8.0.aar/bed054d06f6e7da1bb29327ab87cadec/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-identity:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-identity-11.8.0.aar/bed054d06f6e7da1bb29327ab87cadec/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/8a8f96449c8096e7af4bc293cb96e748/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/8a8f96449c8096e7af4bc293cb96e748/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/2a906768c5804d5aed93148bbf2b8b72/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/2a906768c5804d5aed93148bbf2b8b72/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/3411b7633cebea78a31da7121ac66cb2/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/3411b7633cebea78a31da7121ac66cb2/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-identity-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-identity-license-11.8.0.aar/5882dbdd233a3e1f8bf771bb7df03884/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-identity-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-identity-license-11.8.0.aar/5882dbdd233a3e1f8bf771bb7df03884/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-11.8.0.aar/1ff98ae4d6a2c8dda4d6fc1477eb4da8/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-11.8.0.aar/1ff98ae4d6a2c8dda4d6fc1477eb4da8/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-license-11.8.0.aar/d293d60a8ba4029f7f961066596006dc/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-license-11.8.0.aar/d293d60a8ba4029f7f961066596006dc/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/91b1eac5a6be7da2296ae04d9812b079/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/91b1eac5a6be7da2296ae04d9812b079/AndroidManifest.xml:5:5-20
+MERGED from [com.android.support:support-v4:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/b9d216079040505b1dc2c9d63f47cb41/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/b9d216079040505b1dc2c9d63f47cb41/AndroidManifest.xml:25:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/1fdfb9436495fadf344a5b9aa197819f/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/1fdfb9436495fadf344a5b9aa197819f/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/671e52c9fc2389a4d682a47d41bc0031/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/671e52c9fc2389a4d682a47d41bc0031/AndroidManifest.xml:5:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/2b88d9cfab6a3faa763c6300d0dcc1fa/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/2b88d9cfab6a3faa763c6300d0dcc1fa/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/ead518fda665930444edf6499dbe02a6/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/ead518fda665930444edf6499dbe02a6/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/016a32322f0d969d52d630ca15a2e65f/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/016a32322f0d969d52d630ca15a2e65f/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/128f3521e5a57cf5935eb35c8053837b/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/128f3521e5a57cf5935eb35c8053837b/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/4457f96cb96f94d2f2b5c85200357ac1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/4457f96cb96f94d2f2b5c85200357ac1/AndroidManifest.xml:25:5-20
 	android:supportsRtl
 		ADDED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:5:114-140
 	android:label
@@ -81,12 +134,92 @@ ADDED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/ap
 uses-sdk
 ADDED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:13:5-74
 INJECTED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:13:5-74
+MERGED from [com.google.android.gms:play-services-auth:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/d5c5c0b1cc7dc6d562403953851206bb/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/d5c5c0b1cc7dc6d562403953851206bb/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-identity:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-identity-11.8.0.aar/bed054d06f6e7da1bb29327ab87cadec/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-identity:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-identity-11.8.0.aar/bed054d06f6e7da1bb29327ab87cadec/AndroidManifest.xml:20:5-44
 MERGED from [:CordovaLib] /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
 MERGED from [:CordovaLib] /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-11.8.0.aar/64a8acece48f6d57ed3549921ef2b35c/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-11.8.0.aar/64a8acece48f6d57ed3549921ef2b35c/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-11.8.0.aar/d49957ebd05466ed8e44b5ce0272ad34/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-11.8.0.aar/d49957ebd05466ed8e44b5ce0272ad34/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/8a8f96449c8096e7af4bc293cb96e748/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/8a8f96449c8096e7af4bc293cb96e748/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/2a906768c5804d5aed93148bbf2b8b72/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/2a906768c5804d5aed93148bbf2b8b72/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/3411b7633cebea78a31da7121ac66cb2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/3411b7633cebea78a31da7121ac66cb2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-identity-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-identity-license-11.8.0.aar/5882dbdd233a3e1f8bf771bb7df03884/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-identity-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-identity-license-11.8.0.aar/5882dbdd233a3e1f8bf771bb7df03884/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-11.8.0.aar/1ff98ae4d6a2c8dda4d6fc1477eb4da8/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-11.8.0.aar/1ff98ae4d6a2c8dda4d6fc1477eb4da8/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-license-11.8.0.aar/d293d60a8ba4029f7f961066596006dc/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-license-11.8.0.aar/d293d60a8ba4029f7f961066596006dc/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/91b1eac5a6be7da2296ae04d9812b079/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/91b1eac5a6be7da2296ae04d9812b079/AndroidManifest.xml:4:5-43
+MERGED from [com.android.support:support-v4:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/b9d216079040505b1dc2c9d63f47cb41/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/b9d216079040505b1dc2c9d63f47cb41/AndroidManifest.xml:21:5-23:54
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/1fdfb9436495fadf344a5b9aa197819f/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/1fdfb9436495fadf344a5b9aa197819f/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/671e52c9fc2389a4d682a47d41bc0031/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/671e52c9fc2389a4d682a47d41bc0031/AndroidManifest.xml:4:5-43
+MERGED from [com.android.support:support-fragment:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/2b88d9cfab6a3faa763c6300d0dcc1fa/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/2b88d9cfab6a3faa763c6300d0dcc1fa/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/ead518fda665930444edf6499dbe02a6/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/ead518fda665930444edf6499dbe02a6/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/016a32322f0d969d52d630ca15a2e65f/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/016a32322f0d969d52d630ca15a2e65f/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/128f3521e5a57cf5935eb35c8053837b/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/128f3521e5a57cf5935eb35c8053837b/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/4457f96cb96f94d2f2b5c85200357ac1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/4457f96cb96f94d2f2b5c85200357ac1/AndroidManifest.xml:21:5-23:58
 INJECTED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:13:5-74
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:25.2.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/b9d216079040505b1dc2c9d63f47cb41/AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
 		ADDED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:13:42-71
 	android:minSdkVersion
 		ADDED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:13:15-41
 		INJECTED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml
 		INJECTED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:14:5-71
+	android:name
+		ADDED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:14:22-68
+uses-permission#android.permission.USE_CREDENTIALS
+ADDED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:15:5-74
+	android:name
+		ADDED from /home/burgardt/Projects/personal/acordesfacil/fe/platforms/android/app/src/main/AndroidManifest.xml:15:22-71
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/d5c5c0b1cc7dc6d562403953851206bb/AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/d5c5c0b1cc7dc6d562403953851206bb/AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/d5c5c0b1cc7dc6d562403953851206bb/AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/d5c5c0b1cc7dc6d562403953851206bb/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/d5c5c0b1cc7dc6d562403953851206bb/AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/d5c5c0b1cc7dc6d562403953851206bb/AndroidManifest.xml:33:9-36:110
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/d5c5c0b1cc7dc6d562403953851206bb/AndroidManifest.xml:35:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/d5c5c0b1cc7dc6d562403953851206bb/AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/d5c5c0b1cc7dc6d562403953851206bb/AndroidManifest.xml:34:13-89
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/8a8f96449c8096e7af4bc293cb96e748/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/8a8f96449c8096e7af4bc293cb96e748/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/8a8f96449c8096e7af4bc293cb96e748/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/8a8f96449c8096e7af4bc293cb96e748/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/3411b7633cebea78a31da7121ac66cb2/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/3411b7633cebea78a31da7121ac66cb2/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:11.8.0] /home/burgardt/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/3411b7633cebea78a31da7121ac66cb2/AndroidManifest.xml:24:13-58
