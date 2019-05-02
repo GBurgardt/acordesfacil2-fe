@@ -24,7 +24,8 @@ export class LocalStorageService {
      */
     getObject = (key) => {
         var value = localStorage.getItem(key);
-        return value && JSON.parse(value);
+        
+        return value && value !== 'undefined' && JSON.parse(value);
     }
 
     /**
@@ -121,6 +122,8 @@ export class LocalStorageService {
      */
     getIfVersionIsInFav = (version, songInfo) => {        
         const favoritos = this.getObject('favorites') || [];
+
+        debugger;
 
         // Busco si la canción ya está en favoritos
         const currentSong = favoritos.find(
